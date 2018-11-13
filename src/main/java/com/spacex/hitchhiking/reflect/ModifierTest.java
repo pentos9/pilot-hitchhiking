@@ -3,6 +3,7 @@ package com.spacex.hitchhiking.reflect;
 import com.spacex.hitchhiking.reflect.bean.Goat;
 import org.apache.commons.lang3.StringUtils;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 
 public class ModifierTest {
@@ -14,6 +15,7 @@ public class ModifierTest {
         testClassName();
         testModifier();
         testPackage();
+        testConstructor();
     }
 
     public static void testClassName() throws Exception {
@@ -41,6 +43,13 @@ public class ModifierTest {
         Package goatClassPackage = goatClass.getPackage();
         System.out.println(goatClassPackage.getName());
         System.out.println(StringUtils.equals("com.spacex.hitchhiking.reflect.bean", goatClassPackage.getName()));
+    }
 
+    public static void testConstructor() {
+        Class goatClass = new Goat("dolly").getClass();
+        Constructor[] constructors = goatClass.getConstructors();
+        for (Constructor constructor : constructors) {
+            System.out.println(constructor);
+        }
     }
 }
