@@ -13,9 +13,20 @@ public class StackOverFlowErrorTest {
      * when recursive counter equals: 18799
      *
      * Environment:
-     * openjdk version "11.0.1" 2018-10-16
-     * OpenJDK Runtime Environment 18.9 (build 11.0.1+13)
-     * OpenJDK 64-Bit Server VM 18.9 (build 11.0.1+13, mixed mode)
+     *
+     *     Total bytes: 11,273,403
+     *     Total classes: 655
+     *     Total instances: 13,011
+     *     Classloaders: 3
+     *     GC roots: 607
+     *     Number of objects pending for finalization: 0
+     *
+     *     OS: Mac OS X (10.12.6)
+     *     Architecture: x86_64 64bit
+     *     Java Home: /Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home
+     *     Java Version: 11.0.1
+     *     JVM: OpenJDK 64-Bit Server VM (11.0.1+13, mixed mode)
+     *     Java Vendor: Oracle Corporation
      *
      * @param args
      */
