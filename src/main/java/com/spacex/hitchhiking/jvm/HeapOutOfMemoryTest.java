@@ -3,7 +3,7 @@ package com.spacex.hitchhiking.jvm;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OutOfMemoryTest {
+public class HeapOutOfMemoryTest {
     public static void main(String[] args) {
         run();
     }
