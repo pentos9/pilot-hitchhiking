@@ -18,7 +18,7 @@ public class CglibProxy implements MethodInterceptor {
 
     @Override
     public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
-        Object result = methodProxy.invoke(object, args);
+        Object result = methodProxy.invokeSuper(object, args);
         return result;
     }
 }
