@@ -25,4 +25,13 @@ public class UnsafeTest {
             e.printStackTrace();
         }
     }
+
+
+    /**
+     * It throw SecurityException at this line: Unsafe unsafe = Unsafe.getUnsafe();
+     * get Unsafe instance with Java built-in Reflection util
+     */
+    private static void illegalInvoke() {
+        Unsafe unsafe = Unsafe.getUnsafe();// don't do this
+    }
 }
